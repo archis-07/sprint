@@ -1,0 +1,59 @@
+package practice;
+import java.util.Scanner;
+
+public class Rectangle{
+	private double length;
+	private double width;
+	private double area;
+	private String colour;
+	
+	Scanner object = new Scanner(System.in);
+	
+	Rectangle()
+	{
+		System.out.println("Enter the values of the rectangle : ");
+		System.out.println("\nEnter the length :");
+		length=object.nextDouble();
+		
+		System.out.println("\nEnter the width :");
+		width=object.nextDouble();
+		System.out.println("\nEnter the colourr : ");
+		colour=object.next();
+	}
+	public double get_length()
+	{
+		return(length);
+			
+	}
+	public double get_width()
+	{
+		return(width);
+	}
+	public double find_area()
+	{
+		return(area);
+	}
+	public String get_colour()
+	{
+		return(colour);
+	}
+	
+
+}
+
+class Another
+{
+	public static void main(String args[])
+	{
+		Rectangle obj1=new Rectangle();
+		Rectangle obj2=new Rectangle();
+		
+		if((obj1.find_area() == obj2.find_area()) && (obj1.get_colour().equals(obj2.get_colour())))
+		{
+			System.out.println("Rectangles are matching.");
+		}
+		else 
+			System.out.println("\nNon mstching rectangles.");
+	
+}
+}

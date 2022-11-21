@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class First {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the value of n :");
+		Scanner obj=new Scanner(System.in);
+		int num,sum=0,n;
+		float avg;
+		n=obj.nextInt();
+		
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Enter the number : ");
+			num=obj.nextInt();
+			sum = sum + num;
+			
+		}
+		
+		System.out.println("Addition of " + n + "numbers  is " + sum);
+		avg= sum/n;
+		System.out.println("Average of the number " + n + "is :"  +avg);
+		  
+		
+		int fact=1;
+		System.out.println("Enter the number to calculate the factorial : ");
+		n=obj.nextInt();
+		for(int i=1;i<+n;i++)
+		{
+			fact = fact*i;
+		}
+		System.out.println("Factorial of the " + n+ "numbers is " +fact);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+package example;
+import java.util.Scanner;
+public class Constructor {
+	
+	String name;
+	int roll_no;
+	Scanner object=new Scanner(System.in);
+	
+	Constructor()
+	{
+		System.out.println("This is given default constructor.");
+		System.out.println("Enter you name : ");
+		name = object.next();
+		System.out.println("Enter your roll number : ");
+		roll_no = object.nextInt();
+		
+	}
+	Constructor(String student, int roll)
+	{
+		System.out.println("\nThis is a parameterized constructor.");
+		name = student;
+		roll_no = roll;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Constructor c1 = new Constructor();
+		System.out.println("\nName : " + c1.name);
+		System.out.println("Roll no : " + c1.roll_no);
+		Constructor c2=new Constructor ("Anushka",20);
+		System.out.println("Name : " + c2.name);
+		System.out.println("\nRoll No : " + c2.roll_no);
+
+	}
+
+}
