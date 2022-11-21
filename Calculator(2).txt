@@ -1,0 +1,74 @@
+package second;
+import java.util.Scanner;
+
+public class Calculator {
+	
+	public int firstNo;
+	public int secondNo;
+	public int result;
+	
+	
+	public void getNumbers()
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the first number : ");
+		firstNo = sc.nextInt();
+		System.out.println("Enter the second number :");
+		secondNo =sc.nextInt();
+	} 
+	
+	public void add()//addition
+	{
+		result = firstNo + secondNo;
+		System.out.println("Addition is  :" + result);
+	}
+	public void subtract()
+	{
+		result = firstNo - secondNo;
+		System.out.println("substraction of the two numbers is  :" + result);
+	}
+	public void multiply()
+	{
+		result = firstNo*secondNo;
+		System.out.println("multiplication is : " + result);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ int choice,cont;
+ 
+ Calculator obj = new Calculator();
+ obj.getNumbers();
+ Scanner sc=new Scanner(System.in);
+ do {
+	 System.out.println("\nWhich op you want to perform : ");
+	 System.out.println("\n1Add \n2sub\n3multi");
+	 System.out.println("enter your choice :");
+	 choice=sc.nextInt();
+	 
+	 switch(choice) 
+	 {
+	 case 1:
+	 obj.add();
+	 break;
+	 
+	 case 2:
+		 obj.subtract();
+	 break;
+	 case 3:
+		 obj.multiply();
+        break;
+        
+        default :
+        	System.out.println("invalid choice.");
+	 
+	 }
+	 System.out.println("do you want to continue :\n1.YES 0.NO:");
+	 cont =sc.nextInt();
+	 
+   	}
+		while(cont==1);
+	}
+
+}
